@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>VALORANTが真っ暗で落ちるときの対処法</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 860px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+    }
+    h1, h2 {
+      color: #1d3557;
+    }
+    h1 {
+      font-size: 28px;
+    }
+    h2 {
+      margin-top: 40px;
+      font-size: 22px;
+    }
+    p, li {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 5px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+    }
+    pre {
+      background: #f1f1f1;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    a {
+      color: #e63946;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .tip {
+      background: #eaf4f4;
+      padding: 12px;
+      border-left: 5px solid #38a3a5;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>VALORANTが真っ暗で落ちるときの対処法【画像付き】</h1>
+    <p>VALORANT起動時に画面が真っ暗なまま終了してしまう現象に対して、シンプルにできる対処法をまとめました。画像付きで分かりにくい操作も安心です！</p>
+
+    <h2>1. Vanguard（アンチチート）の再インストール</h2>
+    <ol>
+      <li>「アプリと機能」から <strong>Riot Vanguard</strong> をアンインストール</li>
+      <li>PCを再起動</li>
+      <li>VALORANTを起動 → Vanguardが自動で再インストールされます</li>
+    </ol>
+
+    <h2>2. Vanguardサービス（vgc）の手動起動</h2>
+    <p>Vanguardサービスが停止しているとVALORANTは起動しません。</p>
+    <ol>
+      <li><kbd>Win + R</kbd>を押して、<code>services.msc</code>と入力</li>
+      <li>「<strong>vgc</strong>」を右クリック → <strong>開始</strong></li>
+    </ol>
+    <img src="https://i.imgur.com/QDb8Rkp.png" alt="vgcサービスの起動方法">
+
+    <h2>3. 管理者としてVALORANTを起動</h2>
+    <p>ショートカットを右クリック → 「<strong>管理者として実行</strong>」を選択します。</p>
+
+    <h2>4. DirectX11モードで強制起動</h2>
+    <p>DirectXの初期化で落ちるケースを回避できます。</p>
+    <ol>
+      <li>VALORANTのショートカットを右クリック →「プロパティ」</li>
+      <li>「リンク先」に以下を追加：</li>
+    </ol>
+    <pre>"C:\Riot Games\VALORANT\live\VALORANT.exe" -dx11</pre>
+    <img src="https://i.imgur.com/NxPgS0u.png" alt="DirectX11起動の設定例">
+
+    <h2>5. ゲーム設定ファイルを初期化</h2>
+    <p>破損した設定が原因の場合、初期化で解決することがあります。</p>
+    <ol>
+      <li>以下のフォルダを開く：</li>
+      <pre>C:\Users\あなたのユーザー名\AppData\Local\VALORANT\Saved</pre>
+      <li>「<strong>Saved</strong>」フォルダを削除</li>
+    </ol>
+
+    <h2>6. グラフィックドライバーを最新にする</h2>
+    <ul>
+      <li><a href="https://www.nvidia.co.jp/Download/index.aspx?lang=jp" target="_blank">NVIDIAドライバーを更新</a></li>
+      <li><a href="https://www.amd.com/ja/support" target="_blank">AMDドライバーを更新</a></li>
+    </ul>
+
+    <h2>7. イベントビューアーで原因を調査</h2>
+    <p>何が原因で落ちているかをログで確認できます。</p>
+    <ol>
+      <li>Windowsキーで「イベントビューアー」と検索</li>
+      <li>「Windowsログ → アプリケーション」へ移動</li>
+      <li>VALORANTが落ちた時間付近のエラーを確認</li>
+    </ol>
+    <img src="https://i.imgur.com/B1JUZCP.png" alt="イベントビューアーでの確認">
+
+    <h2>8. セキュリティソフトの一時無効化</h2>
+    <p>Vanguardがブロックされていないか、Windows Defenderや他のアンチウイルスソフトを一時的に停止して確認しましょう。</p>
+
+    <h2>9. 最終手段：完全再インストール</h2>
+    <p>Riot Clientごと一度アンインストール → 再起動 → 再インストールでリセットするのも有効です。</p>
+
+    <div class="tip">
+      💡 困ったときはこのページをブックマーク！アップデート後などにも再発することがあります。
+    </div>
+  </div>
+</body>
+</html>
